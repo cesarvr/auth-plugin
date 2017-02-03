@@ -39,11 +39,15 @@ public class PluginEntryClass extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("hello")) {
-            this.pdfPrinter(args, callbackContext);
-
+        if (action.equals("authenticate")) {
+            this.auth(args, callbackContext);
             return true;
         }
         return false;
     }
+
+    private void auth(JSONArray args, CallbackContext callbackContext){
+
+    }
 }
+
